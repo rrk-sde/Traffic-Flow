@@ -59,3 +59,32 @@
   font-size: 0.72rem;
   font-family: 'IBM Plex Mono', monospace;
 }
+
+@media (max-width: 740px) {
+  .item {
+    padding: 0.65rem;
+    min-height: 44px;
+  }
+
+  .list {
+    max-height: 14rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 0.6rem;
+  }
+
+  .header h2 {
+    font-size: 0.9rem;
+  }
+
+  .rowTop {
+    font-size: 0.68rem;
+  }
+
+  .rowMeta {
+    font-size: 0.66rem;
+  }
+}

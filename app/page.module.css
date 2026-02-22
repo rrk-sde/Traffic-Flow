@@ -106,15 +106,67 @@
 @media (max-width: 740px) {
   .page {
     width: min(96vw, 700px);
-    margin-top: 0.8rem;
+    margin-top: 0.6rem;
+    gap: 0.7rem;
   }
 
   .header {
     flex-direction: column;
     align-items: flex-start;
+    padding: 0.85rem 1rem;
+  }
+
+  .header h1 {
+    font-size: 1.25rem;
+  }
+
+  .headerMeta {
+    width: 100%;
+  }
+
+  .headerMeta span {
+    font-size: 0.7rem;
+    padding: 0.22rem 0.52rem;
+    flex: 1;
+    text-align: center;
   }
 
   .toggleRow {
     flex-direction: column;
+  }
+
+  .workspace {
+    gap: 0.7rem;
+  }
+
+  .empty {
+    padding: 1rem;
+  }
+
+  .empty h2 {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .page {
+    width: 100vw;
+    margin: 0;
+    padding: 0.5rem;
+    gap: 0.5rem;
+  }
+
+  .header {
+    border-radius: var(--radius-sm);
+    padding: 0.7rem;
+  }
+
+  .kicker {
+    font-size: 0.6rem;
+  }
+
+  .header h1 {
+    font-size: 1.1rem;
+    margin-top: 0.15rem;
   }
 }

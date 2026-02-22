@@ -55,8 +55,15 @@
 }
 
 @keyframes pulse {
-  0%, 100% { opacity: 0.78; }
-  50% { opacity: 1; }
+
+  0%,
+  100% {
+    opacity: 0.78;
+  }
+
+  50% {
+    opacity: 1;
+  }
 }
 
 .legend {
@@ -78,4 +85,42 @@
   width: 0.56rem;
   height: 0.56rem;
   border-radius: 999px;
+}
+
+@media (max-width: 740px) {
+  .container {
+    padding: 0.7rem;
+  }
+
+  .intersectionWrapper {
+    max-width: 100%;
+  }
+
+  .header h2 {
+    font-size: 1.05rem;
+  }
+
+  .legend {
+    gap: 0.6rem;
+  }
+
+  .legendItem {
+    font-size: 0.68rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 0.55rem;
+    gap: 0.5rem;
+  }
+
+  .header {
+    flex-wrap: wrap;
+    gap: 0.4rem;
+  }
+
+  .badge {
+    font-size: 0.65rem;
+  }
 }
