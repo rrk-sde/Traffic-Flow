@@ -1,0 +1,209 @@
+.panel {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.95rem;
+  max-height: calc(100vh - 2rem);
+  overflow: auto;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+
+.kicker {
+  margin: 0;
+  color: var(--text-2);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.66rem;
+}
+
+.header h2 {
+  margin: 0.2rem 0 0;
+  font-size: 1.25rem;
+}
+
+.status {
+  border-radius: 999px;
+  padding: 0.25rem 0.6rem;
+  font-size: 0.72rem;
+  border: 1px solid;
+}
+
+.ok {
+  color: var(--good);
+  border-color: color-mix(in srgb, var(--good) 45%, transparent);
+}
+
+.warn {
+  color: #ffd166;
+  border-color: rgba(255, 209, 102, 0.4);
+}
+
+.block {
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+}
+
+.presetHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.presetStatus {
+  color: var(--text-2);
+  font-size: 0.68rem;
+  font-family: 'IBM Plex Mono', monospace;
+}
+
+.presetGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.4rem;
+}
+
+.presetBtn {
+  width: 100%;
+}
+
+.presetBtnActive {
+  border-color: color-mix(in srgb, var(--accent-2) 70%, white 5%);
+  background: color-mix(in srgb, var(--accent-2) 18%, transparent);
+  color: var(--text-0);
+  box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--accent-2) 45%, transparent);
+}
+
+.tabs {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.4rem;
+}
+
+.tab {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.36rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  background: rgba(255, 255, 255, 0.02);
+  color: var(--text-1);
+  font-size: 0.82rem;
+  font-weight: 600;
+  padding: 0.52rem 0.45rem;
+  cursor: pointer;
+}
+
+.tabActive {
+  border-color: color-mix(in srgb, var(--dir-color) 60%, white 5%);
+  background: color-mix(in srgb, var(--dir-color) 12%, transparent);
+  color: var(--text-0);
+}
+
+.tabDot {
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 999px;
+  background: var(--dir-color);
+}
+
+.directionPanel {
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 0.7rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.subHeader h3 {
+  margin: 0;
+  font-size: 0.92rem;
+}
+
+.timingGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 0.45rem;
+}
+
+.laneHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.laneHeader h3 {
+  margin: 0;
+  font-size: 0.92rem;
+}
+
+.laneList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+}
+
+.laneCard {
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  background: rgba(8, 15, 23, 0.68);
+  padding: 0.62rem;
+}
+
+.laneTopRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+}
+
+.laneTopRow p {
+  margin: 0;
+  color: var(--text-1);
+  font-size: 0.8rem;
+}
+
+.removeLane {
+  border: 1px solid rgba(255, 107, 107, 0.35);
+  border-radius: 999px;
+  background: transparent;
+  color: #ff9b9b;
+  font-size: 0.7rem;
+  padding: 0.2rem 0.5rem;
+  cursor: pointer;
+}
+
+.laneGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.45rem;
+}
+
+.runButton {
+  width: 100%;
+  padding: 0.78rem;
+}
+
+@media (min-width: 760px) {
+  .laneGrid {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+@media (max-width: 740px) {
+  .timingGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .tabs {
+    grid-template-columns: 1fr 1fr;
+  }
+}

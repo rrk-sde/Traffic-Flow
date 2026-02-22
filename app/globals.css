@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap');
+
+:root {
+  --bg-0: #0f1723;
+  --bg-1: #1d2b3a;
+  --card: rgba(20, 31, 45, 0.72);
+  --card-strong: rgba(20, 31, 45, 0.9);
+  --border: rgba(173, 216, 230, 0.18);
+  --border-strong: rgba(173, 216, 230, 0.35);
+  --text-0: #f6fbff;
+  --text-1: #b7c7d8;
+  --text-2: #8ea2b7;
+  --accent: #2ec4b6;
+  --accent-2: #5bc0eb;
+  --good: #7ae582;
+  --bad: #ff6b6b;
+  --radius-sm: 10px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  min-height: 100%;
+  background:
+    radial-gradient(circle at 8% 10%, rgba(46, 196, 182, 0.2), transparent 36%),
+    radial-gradient(circle at 92% 90%, rgba(91, 192, 235, 0.2), transparent 34%),
+    linear-gradient(150deg, var(--bg-0), var(--bg-1));
+  color: var(--text-0);
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background-image: linear-gradient(rgba(255, 255, 255, 0.025) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, 0.025) 1px, transparent 1px);
+  background-size: 32px 32px;
+  mask-image: radial-gradient(circle at 50% 50%, black 35%, transparent 90%);
+}
+
+.glass-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  backdrop-filter: blur(14px);
+}
+
+.btn {
+  border: 1px solid transparent;
+  border-radius: 999px;
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 600;
+  font-size: 0.92rem;
+  padding: 0.62rem 1rem;
+  cursor: pointer;
+  transition: 180ms ease;
+}
+
+.btn:hover {
+  transform: translateY(-1px);
+}
+
+.btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.btn-primary {
+  background: linear-gradient(120deg, var(--accent), var(--accent-2));
+  color: #062631;
+}
+
+.btn-ghost {
+  background: rgba(255, 255, 255, 0.03);
+  border-color: var(--border);
+  color: var(--text-1);
+}
+
+.btn-sm {
+  padding: 0.42rem 0.78rem;
+  font-size: 0.8rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.form-label {
+  color: var(--text-2);
+  font-size: 0.68rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-weight: 700;
+}
+
+.form-input,
+.form-select {
+  width: 100%;
+  background: rgba(6, 15, 24, 0.7);
+  border: 1px solid rgba(173, 216, 230, 0.2);
+  border-radius: var(--radius-sm);
+  color: var(--text-0);
+  font-family: 'IBM Plex Mono', monospace;
+  padding: 0.6rem 0.7rem;
+  outline: none;
+}
+
+.form-input:focus,
+.form-select:focus {
+  border-color: var(--border-strong);
+}
+
+.form-select option {
+  background: #102130;
+}
+
+@media (max-width: 740px) {
+  .btn {
+    width: 100%;
+  }
+}
